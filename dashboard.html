@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unique Library | User Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="web.css" />
+  </head>
+  <body>
+    <div class="loader" aria-hidden="true">
+      <div class="loader__ring"></div>
+    </div>
+
+    <header class="topbar">
+      <a class="brand" href="web.html">
+        <span>Unique</span>
+        <strong>Library</strong>
+      </a>
+      <nav class="topnav">
+        <a href="web.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+    </header>
+
+    <main class="dashboard-shell">
+      <section class="hero-card reveal">
+        <div>
+          <p class="eyebrow">User access portal</p>
+          <h2>Welcome, <span id="userName">Student</span></h2>
+          <p>
+            You can view the library facilities, explore the general information, and report any issue or complaint.
+          </p>
+        </div>
+        <div class="hero-card__stats">
+          <div>
+            <strong>24/7</strong>
+            <span>Access</span>
+          </div>
+          <div>
+            <strong>AC</strong>
+            <span>Comfort</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-grid">
+        <div class="panel reveal">
+          <h2>Your profile</h2>
+          <div class="info-grid">
+            <div class="info-card">
+              <h3>Name</h3>
+              <p id="profileName">-</p>
+            </div>
+            <div class="info-card">
+              <h3>Mobile Number</h3>
+              <p id="profileMobile">-</p>
+            </div>
+            <div class="info-card">
+              <h3>Address</h3>
+              <p id="profileAddress">-</p>
+            </div>
+            <div class="info-card">
+              <h3>Fee Status</h3>
+              <p id="profileFee">Pending</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel reveal">
+          <h2>Library features</h2>
+          <div class="info-grid">
+            <div class="info-card">
+              <h3>Air Conditioned Rooms</h3>
+              <p>Comfortable and climate-controlled study halls.</p>
+            </div>
+            <div class="info-card">
+              <h3>Water Dispenser</h3>
+              <p>Access to clean drinking water throughout the day.</p>
+            </div>
+            <div class="info-card">
+              <h3>Neat & Clean Washroom</h3>
+              <p>Fresh and hygienic washroom facilities.</p>
+            </div>
+            <div class="info-card">
+              <h3>Calm Environment</h3>
+              <p>Quiet spaces ideal for uninterrupted learning.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel reveal">
+          <h2>Report an issue</h2>
+          <form id="issueForm" class="form-card">
+            <label>
+              <span>Your message</span>
+              <textarea name="issue" rows="6" placeholder="Describe your issue..."></textarea>
+            </label>
+            <button type="submit">Submit Issue</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="panel reveal">
+        <h2>General information</h2>
+        <p>Membership fee is ₹700 per month. Student fee details remain within admin management and are not visible to regular users.</p>
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>Open Hours</h3>
+            <p>Available 24 hours for students and learners.</p>
+          </div>
+          <div class="info-card">
+            <h3>Study Setup</h3>
+            <p>Comfortable seating, desks, and peaceful corners.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="hero-actions">
+        <button class="btn btn--primary" id="logoutButton">Logout</button>
+      </div>
+    </main>
+
+    <button class="scroll-top" aria-label="Back to top">↑</button>
+
+    <script src="web.js"></script>
+  </body>
+</html>

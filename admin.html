@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unique Library | Admin Panel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="web.css" />
+  </head>
+  <body>
+    <div class="loader" aria-hidden="true">
+      <div class="loader__ring"></div>
+    </div>
+
+    <header class="topbar">
+      <a class="brand" href="web.html">
+        <span>Unique</span>
+        <strong>Library</strong>
+      </a>
+      <nav class="topnav">
+        <a href="web.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+    </header>
+
+    <main class="admin-shell">
+      <div class="admin-layout">
+        <aside class="sidebar reveal">
+          <p class="eyebrow">Admin backend</p>
+          <h2>Admin Panel</h2>
+          <ul>
+            <li>Student records</li>
+            <li>Fee status</li>
+            <li>User issues</li>
+          </ul>
+        </aside>
+
+        <section class="admin-main">
+          <section class="admin-panel reveal">
+            <div class="panel__head panel__head--between">
+              <div>
+                <p class="eyebrow">Admin dashboard</p>
+                <h2>Student management</h2>
+              </div>
+              <label class="search-box">
+                <span>🔎</span>
+                <input type="text" id="searchInput" placeholder="Search student" />
+              </label>
+            </div>
+
+            <div class="stats-grid">
+              <div class="info-card">
+                <strong id="totalStudents">0</strong>
+                <p>Total Students</p>
+              </div>
+              <div class="info-card">
+                <strong id="paidStudents">0</strong>
+                <p>Paid Students</p>
+              </div>
+              <div class="info-card">
+                <strong id="unpaidStudents">0</strong>
+                <p>Unpaid Students</p>
+              </div>
+            </div>
+
+            <div class="fee-banner">
+              <div>
+                <p class="eyebrow">Monthly fee</p>
+                <h3 id="feeValue">₹700</h3>
+              </div>
+              <p>Admin can mark each student as paid or unpaid and set the starting month.</p>
+            </div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Mobile No</th>
+                    <th>Fee Status</th>
+                    <th>Starting Month</th>
+                  </tr>
+                </thead>
+                <tbody id="studentTableBody"></tbody>
+              </table>
+            </div>
+          </section>
+
+          <div class="hero-actions">
+            <button class="btn btn--primary" id="logoutButton">Logout</button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <button class="scroll-top" aria-label="Back to top">↑</button>
+
+    <script src="web.js"></script>
+  </body>
+</html>

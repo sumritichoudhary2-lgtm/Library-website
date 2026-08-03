@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unique Library | Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="web.css" />
+  </head>
+  <body>
+    <div class="loader" aria-hidden="true">
+      <div class="loader__ring"></div>
+    </div>
+
+    <header class="topbar">
+      <a class="brand" href="web.html">
+        <span>Unique</span>
+        <strong>Library</strong>
+      </a>
+      <nav class="topnav">
+        <a href="web.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </header>
+
+    <main class="auth-shell">
+      <section class="auth-card reveal">
+        <p class="eyebrow">Access portal</p>
+        <h2>Welcome back</h2>
+        <p class="hint">Enter your details to access the library portal.</p>
+        <form id="loginForm" class="auth-grid">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" placeholder="Enter your name" />
+          </label>
+          <label>
+            <span>Mobile Number</span>
+            <input type="tel" name="mobile" placeholder="Enter mobile number" required />
+          </label>
+          <label>
+            <span>Address</span>
+            <input type="text" name="address" placeholder="Enter your address" />
+          </label>
+          <button type="submit">Login</button>
+        </form>
+        <div id="errorMessage" class="error-message"></div>
+      </section>
+    </main>
+
+    <button class="scroll-top" aria-label="Back to top">↑</button>
+
+    <script src="web.js"></script>
+  </body>
+</html>
